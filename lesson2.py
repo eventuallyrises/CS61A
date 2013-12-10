@@ -75,5 +75,44 @@ print('sum of squares 5 & 7:', sum_squares(5,7))
 # 2. Bind all the names to the left of = to the resulting values in current frame
 
 
+# --> Lecture 2 Video 4 Starts Here <--
+# *************************************
+# Assignment is a simple means of abstraction: binds names to values
+# Function definition is a more powerful abstraction: binds names to expressions
 
+# use def statement to define function
+# generically:
+# def <name>(<formal parameters>):
+#     return <return expression>
+
+# Function signature indicates how many arguments a funtion takes
+# Funciotn body defines the computational process expressed by the function
+
+# Procedure for execution of function
+# 1. Create a function with signature <name>(<formal parameters>)
+# 2. Set the body of that function to be everything indented after the first line
+# 3. Bind <name> to that function in the current frame
+
+
+# Procedure for calling/applying a user-defined function
+# 1. Add a local frame, forming a new environment
+# 2. Bind the function's formal parameters to its arguments in that frame
+# 3. Execute the body of the function in that new environment
+
+# Looking up names in Environments
+# - Every expression is evaluated in the context of an environment
+# - So far, the current environment is either:
+#    a. The global frame alone
+#    b. A local frame followed by the global frame
+#    
+# The most important things:
+# - An environment is a sequence of frames
+# - A name evaluates to the value bound to that name in the earliest frame
+#   of the current environment in which that name is found
+# - e.g., to look up some name in the body of the square example function:
+#    * look for that name in the local frame
+#    * if not found, look for it in the global frame (built-in names are in global environment)
+
+def squared(squared):
+    return mul(squared, squared)
 
