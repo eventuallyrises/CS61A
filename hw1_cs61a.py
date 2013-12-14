@@ -50,9 +50,10 @@ def two_of_three_v2(a, b, c):
 def benchmark(cycles):
     from random import randint
     from time import perf_counter
+    
     i = 0
     
-    print('starting perf_counter...')
+    print('starting perf_counter V1...')
    
     start = perf_counter()
     while i < cycles:
@@ -63,8 +64,12 @@ def benchmark(cycles):
     
     print('Benchmark counter v1: ', stop - start)
  
- # try it again using other funtion   
+ # try it again using other funtion 
+ # (OK, so not exactly DRY-compliant)
+   
     i = 0
+    
+    print('starting per_counter V2...')
     
     start = perf_counter()
     while i < cycles:
