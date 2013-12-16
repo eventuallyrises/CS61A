@@ -15,6 +15,7 @@ def hailstone(n):
     7
     """
     assert n > 0, 'Seed number %d is not greater than 0' % n    
+    assert type(n) == int, 'Seed number is not an Integer'
     count = 1
     while n != 1:
         print(n)
